@@ -1,0 +1,14 @@
+{
+  "name": "aniversariantes",
+  "version": "1.0.0",
+  "description": "aniversariantes do mes e-it",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aniversario"
+  ],
+  "author": "Dagminha",
+  "license": "ISC"
+}
