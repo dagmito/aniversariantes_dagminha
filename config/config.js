@@ -4,7 +4,7 @@ var consign = require('consign');
 
 var ui5 = require('../app/ui5/ui5Router');
 
-app.use('/', ui5Router.getRouter(express));
+app.use('/', ui5.getRouter(express));
 
 module.exports = function(){
     return app;

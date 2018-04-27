@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "consign": "^0.1.6",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "path": "^0.12.7"
   },
   "repository": {
     "url": "https://github.com/dagmito/aniversariantes_dagminha"
