@@ -25,7 +25,7 @@
         </detailPages>
     </SplitApp> -->
 
-    <!-- <SplitApp id="splitApp">
+    <SplitApp id="splitApp">
         <masterPages>
             <Page title="Página Master">
                 <content>
@@ -44,9 +44,9 @@
                 </content>
             </Page>
         </detailPages>
-    </SplitApp> -->
+    </SplitApp>
 
-    <App>
+    <!-- <App>
         <pages>
             <Page id="page1" title="Estacionamento do Dagminha">
                 <content>
@@ -58,6 +58,6 @@
                 </content>
             </Page>
         </pages>
-    </App>
+    </App> -->
 
 </mvc:View>
