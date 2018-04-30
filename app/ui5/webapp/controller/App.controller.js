@@ -9,7 +9,7 @@ sap.ui.define([
     "sap/ui/model/odata/v2/ODataModel"
 ], function (Controller, MessageBox, Dialog, Button, Input, TileContent, ImageContent, ODataModel) {
     "use strict";
-    return Controller.extend("aniversarios.ui5.controller.App", {
+    return Controller.extend("treinamento.ui5.controller.App", {
 
         onInit: function (evt) {
             var oView = evt.getParameter("value");

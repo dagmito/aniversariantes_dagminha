@@ -2,9 +2,8 @@
 <html>
 
 <head>
-    <title>Aniversariantes</title>
+    <title>Index</title>
     <meta charset="utf-8"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <script 
         id="sap-ui-bootstrap"
         src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
@@ -13,20 +12,19 @@
         data-sap-ui-compatVersion="edge" 
         data-sap-ui-preload="async" 
         data-sap-ui-resourceroots='{
-            "aniversarios.ui5": "./"
+            "treinamento.ui5": "./"
         }'>
     </script>
     <script>
         sap.ui.getCore().attachInit(function () {
             sap.ui.xmlview({
-                viewName: "aniversarios.ui5.view.App"
+                viewName: "treinamento.ui5.view.App"
             }).placeAt("content");
         });
     </script>
 </head>
 
 <body class="sapUiBody" id="content">
-    
 </body>
 
 </html>
