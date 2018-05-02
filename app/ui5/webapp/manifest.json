@@ -31,7 +31,12 @@
                 "sap.m": {}
             }
         },
-        "models": {},
+        "models": {
+            "produto": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "model/Produtos.json"
+            }
+        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",

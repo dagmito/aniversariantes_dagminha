@@ -4,6 +4,25 @@
     controllerName="aniver.ui5.controller.Page2">
 
     <Page title="Página 2" showNavButton="true" navButtonPress="onNavPress">
+        <content>
+            <ObjectHeader 
+                title="{produtoSelecionado>/ProductName}"
+                number="{
+                    path:'produtoSelecionado>/ExtendedPrice',
+                    type: 'sap.ui.model.type.Currency'
+                }"
+                numberUnit="$" >
+                <statuses>
+                    <ObjectStatus 
+                        text="{produtoSelecionado>/Status}" 
+                        state="{= ${produtoSelecionado>/Status} === 'A' ? 'Success' : 'Error' }"/>
+                </statuses>
+                <attributes>
+                    <ObjectAttribute text="{produtoSelecionado>/ShipperName}" />
+                    <ObjectAttribute text="{path: 'produtoSelecionado>/ShippedDate'}" />
+                </attributes>
+            </ObjectHeader>
+        </content>
     </Page>
 
 </mvc:View>

@@ -1,16 +1,11 @@
 sap.ui.define([
-    'sap/ui/core/mvc/Controller',
-    'sap/m/MessageBox'
-], function (Controller, MessageBox) {
+    'sap/ui/core/mvc/Controller'
+], function (Controller) {
     'use strict';
 
     return Controller.extend('aniver.ui5.controller.App', {
 
-        onInit: function () {
-            MessageBox.success("",{
-                title: 'Bem vindo Nelson!'
-            });
-        },
+        onInit: function () {},
 
         onBeforeRendering: function () {},
 
@@ -18,9 +13,7 @@ sap.ui.define([
 
         onExit: function () {},
 
-        onPress: function () {
-            alert('Foi inputado: ' + this.byId('input').getValue());
-        }
+        onPress: function () {}
 
     });
 });
