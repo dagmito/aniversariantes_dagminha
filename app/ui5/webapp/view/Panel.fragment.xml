@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Panel headerText="Panel" expandable="true">
+        <content>
+            <Input id="input" placeholder="Insira um valor"/>
+            <Button text="Pressione" press="onPress"/>
+        </content>
+    </Panel>
+
+</core:FragmentDefinition>
+
+
+
