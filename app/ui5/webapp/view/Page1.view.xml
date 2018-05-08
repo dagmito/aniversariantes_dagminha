@@ -4,7 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="aniver.ui5.controller.Page1">
 
-    <Page title="Page 1">
+    <Page title="Aniversariantes">
         <content>
             <core:Fragment fragmentName="aniver.ui5.view.Panel" type="XML" />
         </content>

@@ -1,0 +1,10 @@
+.sapMOHIcon .sapMImg{
+    border: solid darkslateblue !important;
+    border-radius: 50% !important;
+    max-height: 8rem !important;
+    max-width: 8rem !important;
+}
+
+.sapMOHIcon + .sapMOHTitle {
+    margin-left: 8rem !important;
+}

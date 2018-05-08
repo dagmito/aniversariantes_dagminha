@@ -2,70 +2,80 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <Panel headerText="Panel" expandable="true" expanded="true">
-        <content>
-            <Table 
-                id="table" 
-                items="{
-                    path: 'produto>/Produtos',
-                    sorter: {
-                        path: 'ProductName'
-                    }
-                }">
-                <headerToolbar>
-                    <Toolbar>
-                        <SearchField width="100%" search="onSearch" />
-                    </Toolbar>
-                </headerToolbar>
-                <columns>
-                    <Column>
-                        <header>
-                            <Text text="Status"/>
-                        </header>
-                    </Column>
-                    <Column>
-                        <header>
-                            <Text text="Product Name"/>
-                        </header>
-                    </Column>
-                    <Column>
-                        <header>
-                            <Text text="Quantity"/>
-                        </header>
-                    </Column>
-                    <Column>
-                        <header>
-                            <Text text="Extended Price"/>
-                        </header>
-                    </Column>
-                    <Column>
-                        <header>
-                            <Text text="Shipper Name"/>
-                        </header>
-                    </Column>
-                    <Column>
-                        <header>
-                            <Text text="Shipped Date"/>
-                        </header>
-                    </Column>
-                </columns>
-                <items>
-                    <ColumnListItem type="Navigation" press="onPress">
-                        <cells>
-                            <Text text="{produto>Status}"/>
-                            <ObjectIdentifier title="{produto>ProductName}"/>
-                            <ObjectNumber number="{produto>Quantity}"/>
-                            <ObjectNumber number="{produto>ExtendedPrice}" unit="$"/>
-                            <Text text="{produto>ShipperName}"/>
-                            <Text text="{path: 'produto>ShippedDate'}"/>
-                        </cells>
-                    </ColumnListItem>
-                </items>
-            </Table>
-        </content>
-    </Panel>
+    <Carousel class="sapUiContentPadding" loop="true" height="60%" pages="{path: 'produto>/Produtos'}"
+        showPageIndicator="false">
+       <pages>
+            <ObjectHeader 
+                title="{produto>ProductName}"
+                number="{path: 'produto>ExtendedPrice'}"
+                numberUnit="$" 
+                icon="http://www.criatives.com.br/wp-content/uploads/2017/12/artista-utiliza-o-photoshop-para-mesclar-rostos-famosos-7.jpg" 
+                backgroundDesign="Translucent"
+                fullScreenOptimized="true" >
+                <statuses>
+                    <ObjectStatus 
+                        text="{produto>Status}"/>
+                </statuses>
+                <attributes>
+                    <ObjectAttribute text="{produto>ShipperName}" />
+                    <ObjectAttribute text="{path: 'produto>ShippedDate'}" />
+                </attributes>
+            </ObjectHeader>
+        </pages>
+    </Carousel>
+
+    <Table 
+        id="table" 
+        items="{
+            path: 'produto>/Produtos',
+            sorter: {
+                path: 'ProductName'
+            }
+        }">
+        <columns>
+            <Column>
+                <header>
+                    <Text text="Status"/>
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="Product Name"/>
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="Quantity"/>
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="Extended Price"/>
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="Shipper Name"/>
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Text text="Shipped Date"/>
+                </header>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem type="Navigation" press="onPress">
+                <cells>
+                    <Text text="{produto>Status}"/>
+                    <ObjectIdentifier title="{produto>ProductName}"/>
+                    <ObjectNumber number="{produto>Quantity}"/>
+                    <ObjectNumber number="{produto>ExtendedPrice}" unit="$"/>
+                    <Text text="{produto>ShipperName}"/>
+                    <Text text="{path: 'produto>ShippedDate'}"/>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
 
 </core:FragmentDefinition>
-
-
-
