@@ -1,5 +1,5 @@
 {
-  "name": "aniversariantes",
+  "name": "e-birth",
   "version": "1.0.0",
   "description": "aniversariantes do mes e-it",
   "main": "app.js",
@@ -17,6 +17,10 @@
     "path": "^0.12.7"
   },
   "repository": {
-    "url": "https://github.com/dagmito/aniversariantes_dagminha"
-  }
+    "url": "git+https://github.com/dagmito/aniversariantes_dagminha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dagmito/aniversariantes_dagminha/issues"
+  },
+  "homepage": "https://github.com/dagmito/aniversariantes_dagminha#readme"
 }
