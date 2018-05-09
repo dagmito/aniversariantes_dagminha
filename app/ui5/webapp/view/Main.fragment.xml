@@ -2,36 +2,25 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <Carousel class="sapUiContentPadding" loop="true" height="60%" pages="{path: 'produto>/Produtos'}"
+    <Carousel 
+        class="sapUiContentPadding" 
+        loop="true" 
+        height="75%" 
+        pages="{path: 'produto>/Produtos'}"
         showPageIndicator="false">
        <pages>
             <ObjectHeader 
                 title="{produto>ProductName}"
-                number="{path: 'produto>ExtendedPrice'}"
                 numberUnit="$" 
-                icon="http://www.criatives.com.br/wp-content/uploads/2017/12/artista-utiliza-o-photoshop-para-mesclar-rostos-famosos-7.jpg" 
-                backgroundDesign="Translucent"
+                icon="http://4.bp.blogspot.com/-XLGxCeDgyp0/UcsQmbPB1RI/AAAAAAAAALc/ZdK6aa2R1cE/s1600/isis.jpg" 
                 fullScreenOptimized="true" >
-                <statuses>
-                    <ObjectStatus 
-                        text="{produto>Status}"/>
-                </statuses>
-                <attributes>
-                    <ObjectAttribute text="{produto>ShipperName}" />
-                    <ObjectAttribute text="{path: 'produto>ShippedDate'}" />
-                </attributes>
             </ObjectHeader>
         </pages>
     </Carousel>
 
     <Table 
         id="table" 
-        items="{
-            path: 'produto>/Produtos',
-            sorter: {
-                path: 'ProductName'
-            }
-        }">
+        items="{path: 'produto>/Produtos', sorter: {path: 'ProductName'}}">
         <columns>
             <Column>
                 <header>

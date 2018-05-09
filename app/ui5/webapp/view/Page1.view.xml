@@ -4,9 +4,21 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="aniver.ui5.controller.Page1">
 
-    <Page title="Aniversariantes">
+    <Page showHeader="true" enableScrolling="true">
+        <headerContent>
+            <Bar class="myEitBar sapMBarRight">
+                <contentLeft>
+                    <Image height="90%" src="../public/images/eitneg-03.png"/>
+                </contentLeft>
+                <contentMiddle>
+                </contentMiddle>
+                <contentRight>
+                    <Button text="Cadastrar" press="onRegister"/>
+                </contentRight>
+            </Bar>
+        </headerContent>
         <content>
-            <core:Fragment fragmentName="aniver.ui5.view.Panel" type="XML" />
+            <core:Fragment fragmentName="aniver.ui5.view.Main" type="XML" />
         </content>
     </Page>
 

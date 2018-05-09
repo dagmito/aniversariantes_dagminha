@@ -9,6 +9,12 @@ sap.ui.define([
         
         formatter: Formatter,
 
+        onRegister: function (evt) {
+            var oColumnListItem = evt.getSource();
+
+            this.getOwnerComponent().getRouter().navTo("Page2");
+        },
+
         onPress: function (evt) {
             var oColumnListItem = evt.getSource();
 
