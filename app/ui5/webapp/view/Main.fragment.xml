@@ -5,7 +5,7 @@
     <Carousel 
         class="sapUiContentPadding" 
         loop="true" 
-        height="75%" 
+        height="90%" 
         pages="{path: 'produto>/Produtos'}"
         showPageIndicator="false">
        <pages>
@@ -18,7 +18,7 @@
         </pages>
     </Carousel>
 
-    <Table 
+    <!-- <Table 
         id="table" 
         items="{path: 'produto>/Produtos', sorter: {path: 'ProductName'}}">
         <columns>
@@ -65,6 +65,6 @@
                 </cells>
             </ColumnListItem>
         </items>
-    </Table>
+    </Table> -->
 
 </core:FragmentDefinition>

@@ -4,7 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="aniver.ui5.controller.Page1">
 
-    <Page showHeader="true" enableScrolling="true">
+    <Page showHeader="true" enableScrolling="false">
         <headerContent>
             <Bar class="myEitBar sapMBarRight">
                 <contentLeft>

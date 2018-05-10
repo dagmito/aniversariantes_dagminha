@@ -1,10 +1,10 @@
 .sapMOHIcon .sapMImg{
-    max-height: 20rem !important;
-    max-width: 20rem !important;
+    max-height: 75% !important;
+    max-width: 75% !important;
 }
 
 .sapMOHIcon + .sapMOHTitle {
-    margin-left: 20rem !important;
+    margin-left: 30% !important;
 }
 
 .myEitBar {
