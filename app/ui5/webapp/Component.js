@@ -1,6 +1,6 @@
 sap.ui.define([
     'sap/ui/core/UIComponent',
-    'aniver.ui5/model/model'
+    'aniver/ui5/model/model'
 ], function (UIComponent, model) {
     'use strict';
 
@@ -25,9 +25,9 @@ sap.ui.define([
 
             this.setModel(model.createModel(this));
 
-            this.getModel().attachEventOnce("requestCompleted", function () {
+            // this.getModel().attachEventOnce("requestCompleted", function () {
                 that.getRouter().initialize();
-            });
+            // });
 
         }
     });

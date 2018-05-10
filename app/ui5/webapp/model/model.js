@@ -11,8 +11,21 @@ sap.ui.define([
 
             var URL = oComponent.serviceUrl + '/colaborators';
             var json = {};
-            
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": URL,
+                "method": "GET",
+                "headers": {
+                  "Cache-Control": "no-cache",
+                  'Accept': 'application/json'
+                }
+            }
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+            return oModel;
         }
     }
-
 });
