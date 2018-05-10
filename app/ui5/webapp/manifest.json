@@ -35,7 +35,11 @@
             "produto": {
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "model/Produtos.json"
-            }
+            },
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+			}
         },
         "resources":{
             "css": [{
@@ -49,7 +53,7 @@
                 "viewPath": "aniver.ui5.view",
                 "controlId": "app",
                 "controlAggregation": "pages",
-                "async": true
+                "async": "true"
             },
             "routes": [
                 {
@@ -59,7 +63,7 @@
                 },
                 {
                     "name": "Page2",
-                    "pattern": "page2/{value}",
+                    "pattern": "cadastro",
                     "target": ["Page2"]
                 }
             ],

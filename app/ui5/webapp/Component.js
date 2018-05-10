@@ -1,6 +1,7 @@
 sap.ui.define([
-    'sap/ui/core/UIComponent'
-], function(UIComponent) {
+    'sap/ui/core/UIComponent',
+    'aniver.ui5/model/model'
+], function (UIComponent, model) {
     'use strict';
 
     return UIComponent.extend('aniver.ui5.Component', {
@@ -10,8 +11,24 @@ sap.ui.define([
         },
 
         init: function () {
+
+            var that = this;
+
             UIComponent.prototype.init.apply(this, arguments);
-            this.getRouter().initialize();
+            var url = window.URI()._parts;
+
+            if (url.port) {
+                this.serviceUrl = "http://" + url.hostname + ":" + url.port;
+            } else {
+                this.serviceUrl = "http://" + url.hostname;
+            }
+
+            this.setModel(model.createModel(this));
+
+            this.getModel().attachEventOnce("requestCompleted", function () {
+                that.getRouter().initialize();
+            });
+
         }
     });
 });

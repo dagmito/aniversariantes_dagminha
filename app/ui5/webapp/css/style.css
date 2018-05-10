@@ -1,10 +1,22 @@
 .sapMOHIcon .sapMImg{
-    border: solid darkslateblue !important;
-    border-radius: 50% !important;
-    max-height: 8rem !important;
-    max-width: 8rem !important;
+    max-height: 75% !important;
+    max-width: 75% !important;
 }
 
 .sapMOHIcon + .sapMOHTitle {
-    margin-left: 8rem !important;
+    margin-left: 30% !important;
+}
+
+.myEitBar {
+    background-color: #0400db !important;
+}
+
+.sapMBarRight, .sapMBarPH {
+    padding-left: none !important;
+    padding-right: none !important;
+}
+
+.sapMBtnContent {
+    font-size: 100%;
+    color: white;
 }

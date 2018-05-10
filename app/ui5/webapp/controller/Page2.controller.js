@@ -39,10 +39,9 @@ sap.ui.define([
                 window.history.go(-1);
             } else {
                 var oRouter = this.getOwnerComponent().getRouter();
-                oRouter.navTo("Page1");
+                oRouter.navTo("Main");
             }
         }
 
     });
-
 });
