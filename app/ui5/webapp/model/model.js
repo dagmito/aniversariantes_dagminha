@@ -11,20 +11,40 @@ sap.ui.define([
 
             var URL = oComponent.serviceUrl + '/colaborators';
             var json = {};
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": URL,
-                "method": "GET",
-                "headers": {
-                  "Cache-Control": "no-cache",
-                  'Accept': 'application/json'
-                }
-            }
+           
+            $.ajax({
+                url: URL,
+                method: 'GET',
+                crossDomain: true,
+                async: 'true',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                success: function (res){
+                    var oData = [];
+                    var item = {};
+                    var cnpj;
+                    
+                    for (var i = 0; i < res.length; i++){
+                        var obj = {};
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
+                        obj.cnpj      = res[i].cnpj;
+                        obj.nome      = res[i].nome;
+                        obj.sobrenome = res[i].sobrenome;
+                        obj.apelido   = res[i].apelido;
+                        obj.data_nasc = res[i].data_nasc;
+                        obj.ativo     = res[i].ativo;
+
+                        oData.push(obj);
+                    }
+                    oModel.setData(oData);
+					oModel.fireEvent("requestCompleted");
+					return oModel;
+                },
+                error: function (error){
+                }
             });
+
             return oModel;
         }
     }

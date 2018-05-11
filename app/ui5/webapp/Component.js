@@ -25,9 +25,9 @@ sap.ui.define([
 
             this.setModel(model.createModel(this));
 
-            // this.getModel().attachEventOnce("requestCompleted", function () {
+            this.getModel().attachEventOnce("requestCompleted", function () {
                 that.getRouter().initialize();
-            // });
+            });
 
         }
     });
