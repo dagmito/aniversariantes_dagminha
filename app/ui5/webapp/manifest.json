@@ -32,10 +32,6 @@
             }
         },
         "models": {
-            "produto": {
-                "type": "sap.ui.model.json.JSONModel",
-                "uri": "model/Produtos.json"
-            },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties"
@@ -49,10 +45,16 @@
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "viewPath": "aniver.ui5.view",
                 "controlId": "app",
+                "viewPath": "aniver.ui5.view",
+                "transition": "slide",
+                "viewType": "XML",
                 "controlAggregation": "pages",
+                "bypassed": {
+					"target": [
+						"Page1"
+					]
+				},
                 "async": "true"
             },
             "routes": [
@@ -71,11 +73,13 @@
                 "Page1": {
                     "viewType": "XML",
                     "viewLevel": 0,
+                    "controlAggregation": "pages",
                     "viewName": "Page1"
                 },
                 "Page2": {
                     "viewType": "XML",
                     "viewLevel": 0,
+                    "controlAggregation": "pages",
                     "viewName": "Page2"                    
                 }
             }

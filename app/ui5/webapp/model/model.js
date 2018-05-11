@@ -44,7 +44,6 @@ sap.ui.define([
                 error: function (error){
                 }
             });
-
             return oModel;
         }
     }

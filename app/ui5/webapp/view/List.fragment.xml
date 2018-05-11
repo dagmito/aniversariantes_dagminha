@@ -2,7 +2,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <List items="">
+    <List items="{/}">
         <items>
             <StandardListItem>
             </StandardListItem>

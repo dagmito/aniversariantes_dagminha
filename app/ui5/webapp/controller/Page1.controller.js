@@ -16,8 +16,8 @@ sap.ui.define([
         onAfterRendering: function (evt) {
 
             setInterval(function () {
-                $('.sapMCrslNext').click()
-            }, 2000);
+                // $('.sapMCrslNext').click()
+            }, 6000);
 
         },
 

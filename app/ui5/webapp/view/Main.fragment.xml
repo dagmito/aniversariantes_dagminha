@@ -1,70 +1,25 @@
-<core:FragmentDefinition
-    xmlns="sap.m"
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:xap="sap.uxap" 
     xmlns:core="sap.ui.core">
 
-    <Carousel 
-        class="sapUiContentPadding" 
-        loop="true" 
-        height="90%" 
-        pages="{path: 'produto>/Produtos'}"
-        showPageIndicator="false">
-       <pages>
-            <ObjectHeader 
-                title="{produto>ProductName}"
-                numberUnit="$" 
-                icon="http://4.bp.blogspot.com/-XLGxCeDgyp0/UcsQmbPB1RI/AAAAAAAAALc/ZdK6aa2R1cE/s1600/isis.jpg" 
-                fullScreenOptimized="true" >
-            </ObjectHeader>
+    <Carousel pages="{/}" class="sapUiContentPadding" loop="true" height="90%" showPageIndicator="false">
+        <pages>
+            <xap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" showHeaderContent="true">
+                <xap:headerTitle>
+                    <xap:ObjectPageHeader 
+                        objectImageURI="" 
+                        objectImageShape="Circle" 
+                        objectTitle="{nome} {sobrenome}" 
+                        objectImageAlt="Senior UI Developer" 
+                        id="ObjectPageLayoutHeaderTitle" 
+                        isObjectIconAlwaysVisible="false" 
+                        isObjectTitleAlwaysVisible="false" 
+                        showPlaceholder="true">
+                    </xap:ObjectPageHeader>
+                </xap:headerTitle>
+            </xap:ObjectPageLayout>
         </pages>
     </Carousel>
-
-    <!-- <Table 
-        id="table" 
-        items="{path: 'produto>/Produtos', sorter: {path: 'ProductName'}}">
-        <columns>
-            <Column>
-                <header>
-                    <Text text="Status"/>
-                </header>
-            </Column>
-            <Column>
-                <header>
-                    <Text text="Product Name"/>
-                </header>
-            </Column>
-            <Column>
-                <header>
-                    <Text text="Quantity"/>
-                </header>
-            </Column>
-            <Column>
-                <header>
-                    <Text text="Extended Price"/>
-                </header>
-            </Column>
-            <Column>
-                <header>
-                    <Text text="Shipper Name"/>
-                </header>
-            </Column>
-            <Column>
-                <header>
-                    <Text text="Shipped Date"/>
-                </header>
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem type="Navigation" press="onPress">
-                <cells>
-                    <Text text="{produto>Status}"/>
-                    <ObjectIdentifier title="{produto>ProductName}"/>
-                    <ObjectNumber number="{produto>Quantity}"/>
-                    <ObjectNumber number="{produto>ExtendedPrice}" unit="$"/>
-                    <Text text="{produto>ShipperName}"/>
-                    <Text text="{path: 'produto>ShippedDate'}"/>
-                </cells>
-            </ColumnListItem>
-        </items>
-    </Table> -->
 
 </core:FragmentDefinition>
