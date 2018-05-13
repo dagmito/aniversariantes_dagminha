@@ -1,25 +1,29 @@
 <core:FragmentDefinition 
     xmlns="sap.m" 
     xmlns:xap="sap.uxap" 
-    xmlns:core="sap.ui.core">
-
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout">
     <Carousel pages="{/}" class="sapUiContentPadding" loop="true" height="90%" showPageIndicator="false">
         <pages>
-            <xap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true" showHeaderContent="true">
-                <xap:headerTitle>
-                    <xap:ObjectPageHeader 
-                        objectImageURI="" 
-                        objectImageShape="Circle" 
-                        objectTitle="{nome} {sobrenome}" 
-                        objectImageAlt="Senior UI Developer" 
-                        id="ObjectPageLayoutHeaderTitle" 
-                        isObjectIconAlwaysVisible="false" 
-                        isObjectTitleAlwaysVisible="false" 
-                        showPlaceholder="true">
-                    </xap:ObjectPageHeader>
-                </xap:headerTitle>
-            </xap:ObjectPageLayout>
+            <Panel class="sapUiDemoFlexBoxSizeAdjustments">
+                <xap:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
+                    <xap:headerTitle>
+                        <xap:ObjectPageHeader objectTitle="{nome} {sobrenome}" objectSubtitle="Apelido: {apelido}"></xap:ObjectPageHeader>
+                    </xap:headerTitle>
+                    <xap:headerContent>
+                        <l:VerticalLayout class="sapUiContentPadding" width="100%">
+                            <l:content>
+                                <FlexBox alignItems="Start" justifyContent="SpaceBetween">
+                                    <items>
+                                        <Image class="myImageCustom" src="../public/images/colaborators/{cnpj}.jpg"></Image>
+                                        <Text text="Aniversário: {data_nasc}" />
+                                    </items>
+                                </FlexBox>
+                            </l:content>
+                        </l:VerticalLayout>
+                    </xap:headerContent>
+                </xap:ObjectPageLayout>
+            </Panel>
         </pages>
     </Carousel>
-
 </core:FragmentDefinition>

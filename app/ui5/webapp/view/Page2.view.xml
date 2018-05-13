@@ -4,28 +4,17 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="aniver.ui5.controller.Page2">
 
-    <Page title="Cadastro" showNavButton="true" navButtonPress="onNavPress">
-        <subHeader>
-            <Bar>
+    <Page>
+        <headerContent>
+            <Bar class="myEitBar sapMBarRight">
+                <contentLeft>
+                    <Button icon="sap-icon://nav-back" press="onNavPress" />
+                </contentLeft>
                 <contentMiddle>
-                    <SearchField 
-                        id="searchField" 
-                        width="100%" 
-                        placeholder="{i18n>searchText}" 
-                        enableSuggestions="false"/>
+                    <Text text="Colaboradores" class="myTitle" />
                 </contentMiddle>
             </Bar>
-        </subHeader>
-        <content>
-            <SplitApp>
-                <masterPages>
-                    <core:Fragment fragmentName="aniver.ui5.view.List" type="XML"/>
-                </masterPages>
-                <detailPages>
-                    <core:Fragment fragmentName="aniver.ui5.view.Form" type="XML"/>
-                </detailPages>
-            </SplitApp>
-        </content>
+        </headerContent>
     </Page>
 
 </mvc:View>
